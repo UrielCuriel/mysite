@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "urielcuriel";
+  src: url("urielcuriel-Normal.woff2") format("woff2"),
+    url("urielcuriel-Normal.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "urielcuriel";
+  src: url("urielcuriel-Thin.woff2") format("woff2"),
+    url("urielcuriel-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "urielcuriel";
+  src: url("urielcuriel-Bold.woff2") format("woff2"),
+    url("urielcuriel-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
