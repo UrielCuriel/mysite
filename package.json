@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-netlify": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/jit": "^0.1.18",
+		"@types/markdown-it": "^12.0.2",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"autoprefixer": "^10.2.6",
@@ -32,8 +33,10 @@
 		"typescript": "^4.0.0"
 	},
 	"dependencies": {
+		"@contentful/rich-text-html-renderer": "^14.1.2",
 		"@types/dotenv": "^8.2.0",
 		"contentful": "^8.4.0",
-		"dotenv": "^10.0.0"
+		"dotenv": "^10.0.0",
+		"markdown-it": "^12.0.6"
 	}
 }

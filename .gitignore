@@ -3,6 +3,10 @@ node_modules
 /.svelte-kit
 /package
 
+# svelte build
+/build
+/functions
+
 # Local Netlify folder
 .netlify
 .env

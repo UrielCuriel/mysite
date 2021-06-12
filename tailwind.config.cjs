@@ -81,7 +81,10 @@ module.exports = {
 		},
 		colors: { primary, neutral, support, ...base },
 		gridTemplateColumns: {
-			layout: 'minmax(50px,1fr) 1fr 1fr'
+			layout: 'minmax(50px,200px) 1fr 1fr'
+		},
+		gridTemplateRows:{
+			layout: '1fr 50px'
 		}
 	},
 	variants: { fill: ['hover'], animation: ['responsive', 'hover', 'focus'] },

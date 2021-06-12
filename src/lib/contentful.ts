@@ -1,4 +1,4 @@
-import contentful from 'contentful'
+import * as contentful from 'contentful'
 import { config } from '$lib/config'
 
 export const client = contentful.createClient({

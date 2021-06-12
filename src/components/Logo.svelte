@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition'
-	export let show: boolean = true
+	export let show: boolean = false
 </script>
 
 {#if show}
