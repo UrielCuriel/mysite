@@ -32,6 +32,8 @@
 		"typescript": "^4.0.0"
 	},
 	"dependencies": {
-		"contentful": "^8.4.0"
+		"@types/dotenv": "^8.2.0",
+		"contentful": "^8.4.0",
+		"dotenv": "^10.0.0"
 	}
 }

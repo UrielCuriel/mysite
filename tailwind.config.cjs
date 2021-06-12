@@ -79,7 +79,10 @@ module.exports = {
 			subtitle: ['Reenie Beanie', 'cursive'],
 			logo: ['urielcuriel', 'Leo Rounded Pro', 'Roboto']
 		},
-		colors: { primary, neutral, support, ...base }
+		colors: { primary, neutral, support, ...base },
+		gridTemplateColumns: {
+			layout: 'minmax(50px,1fr) 1fr 1fr'
+		}
 	},
 	variants: { fill: ['hover'], animation: ['responsive', 'hover', 'focus'] },
 	plugins: []

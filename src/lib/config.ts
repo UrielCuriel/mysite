@@ -1,11 +1,9 @@
-interface IConfig {
-	CONTENTFUL_SPACE: string
-	CONTENTFUL_ENVIRONMENT: string
-	CONTENTFUL_ACCESS_TOKEN: string
-}
+import * as dotenv from 'dotenv'
 
-export const config: IConfig = {
-	CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
-	CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
-	CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
+dotenv.config()
+
+export const config = {
+	CONTENTFUL_SPACE: process.env['CONTENTFUL_SPACE'],
+	CONTENTFUL_ENVIRONMENT: process.env['CONTENTFUL_ENVIRONMENT'],
+	CONTENTFUL_ACCESS_TOKEN: process.env['CONTENTFUL_ACCESS_TOKEN']
 }

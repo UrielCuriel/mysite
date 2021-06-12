@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "build/"
+  functions = "functions/"
+
+[dev]
+  command = "npm run dev -- --host 0.0.0.0"
+  publish = "build/"
+  functions = "functions/"
