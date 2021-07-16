@@ -2,9 +2,11 @@
 	import Footer from '../components/Footer.svelte'
 	import '../app.css'
 	import Menu from '../components/Menu.svelte'
+	import Locales from '../components/Locales.svelte'
 </script>
 
-<div class="bg-neutral-100 contenedor overflow-x-hidden">
+<div class="bg-neutral-100 contenedor overflow-x-hidden min-h-screen">
+	<Locales />
 	<div class="menu"><Menu /></div>
 	<div class="body"><slot /></div>
 	<div class="footer"><Footer /></div>

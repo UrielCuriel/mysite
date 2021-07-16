@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Reenie+Beanie&family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
 	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: #37bcc8 #F0F4F8;
 }
