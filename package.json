@@ -41,6 +41,7 @@
 	"dependencies": {
 		"@contentful/rich-text-html-renderer": "^14.1.2",
 		"@types/dotenv": "^8.2.0",
+		"bufferutil": "^4.0.3",
 		"chrome-aws-lambda": "^10.1.0",
 		"contentful": "^8.4.0",
 		"dotenv": "^10.0.0",
