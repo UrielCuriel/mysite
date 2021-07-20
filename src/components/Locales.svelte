@@ -1,11 +1,11 @@
 <svelte:options accessors />
 
-<script lang="ts">
-	import { page } from '$app/stores'
+<script>
 	import { slide } from 'svelte/transition'
 	import { locale } from '$lib/store/locale'
 	import { onMount } from 'svelte'
 	import type { Locale } from 'contentful'
+	import { page } from '$app/stores'
 	let locales: Locale[]
 	let open: boolean = false
 	let close = () => {
@@ -26,17 +26,19 @@
 		close()
 	}
 	let setLocale = (_locale: Locale) => {
+		if ($page.query.has('locale')) {
+			$page.query.set('locale', _locale.code)
+		} else $page.query.append('locale', _locale.code)
+		console.log($page.query.toString())
+		document.location.search = $page.query.toString()
 		locale.set(_locale)
-		$page.query.set('locale', _locale.code)
 		close()
 	}
 	$: showMenu = !!open
 	onMount(async () => {
 		locales = await (await fetch(`/api/langs.json`)).json()
-		page.subscribe(({ query }) => {
-			const _locale = query.get('locale')
-			console.log(_locale)
-		})
+		const _locale = locales.find(({ code }) => code === $page.query.get('locale'))
+		if (_locale) locale.set(_locale)
 	})
 </script>
 
@@ -45,7 +47,7 @@
 <div
 	bind:this={buttonElement}
 	on:click={() => (open = !open)}
-	class="fixed top-2 right-2 text-neutral-700 hover:text-primary-600 w-12 h-8 z-40 cursor-pointer flex flex-col items-center"
+	class="fixed top-2 right-2 text-neutral-700 hover:text-primary-600 w-12 h-8 z-40 cursor-pointer flex flex-col items-center print:hidden"
 >
 	<i class="fas fa-language text-xl" />
 	<span class="text-xs">{$locale.code}</span>

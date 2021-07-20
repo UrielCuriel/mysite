@@ -13,7 +13,7 @@
 </script>
 
 {#if socialMedia}
-	<footer class="w-full fixed bottom-0 z-50 bg-neutral-100  px-4">
+	<footer class="w-full fixed bottom-0 z-50 bg-neutral-100  px-4 print:hidden">
 		<div
 			class="w-full border-t-2 border-dashed border-neutral-800 flex justify-between items-center h-12"
 		>

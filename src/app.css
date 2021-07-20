@@ -8,3 +8,7 @@ html {
 	scrollbar-width: thin;
 	scrollbar-color: #37bcc8 #F0F4F8;
 }
+
+s{
+	@apply text-neutral-400
+}

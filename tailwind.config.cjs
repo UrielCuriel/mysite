@@ -79,11 +79,17 @@ module.exports = {
 				print: { raw: 'print' }
 			},
 			gridTemplateColumns: {
-				layout: 'minmax(50px,200px) 1fr 1fr'
+				layout: '200px 1fr 1fr'
 			},
 			gridTemplateRows: {
 				layout: '1fr 50px'
-			}
+			},
+			gridTemplateAreas: {
+				'layout': [
+				  'menu body body',
+				  'footer footer footer',
+				],
+			  },
 		},
 		fontFamily: {
 			display: ['Leo Rounded Pro', 'Roboto'],
@@ -95,5 +101,5 @@ module.exports = {
 		colors: { primary, neutral, support, ...base }
 	},
 	variants: { fill: ['hover'], animation: ['responsive', 'hover', 'focus'] },
-	plugins: []
+	plugins: [require('@savvywombat/tailwindcss-grid-areas')]
 }

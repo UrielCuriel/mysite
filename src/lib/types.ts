@@ -4,335 +4,338 @@ import type { Asset, Entry } from 'contentful'
 import type { Document } from '@contentful/rich-text-types'
 
 export interface IAcademicTrainingFields {
-    /** name */
-    name?: string | undefined
+	/** name */
+	name?: string | undefined
 
-    /** title */
-    title?: string | undefined
+	/** title */
+	title?: string | undefined
 
-    /** type */
-    type?: 'bachelor' | 'university' | 'course' | undefined
+	/** type */
+	type?: 'bachelor' | 'university' | 'course' | undefined
 
-    /** Date start */
-    dateStart?: string | undefined
+	/** Date start */
+	dateStart?: string | undefined
 
-    /** Date End */
-    dateEnd?: string | undefined
+	/** Date End */
+	dateEnd?: string | undefined
 
-    /** institute */
-    institute?: string | undefined
+	/** institute */
+	institute?: string | undefined
 
-    /** description */
-    description?: string | undefined
+	/** description */
+	description?: string | undefined
 }
 
 export interface IAcademicTraining extends Entry<IAcademicTrainingFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'academicTraining'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'academicTraining'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface IAuthorFields {
-    /** name */
-    name?: string | undefined
+	/** name */
+	name?: string | undefined
 
-    /** resume */
-    resume?: string | undefined
+	/** resume */
+	resume?: string | undefined
 
-    /** socialMedia */
-    socialMedia?: Record<string, string> | undefined
+	/** socialMedia */
+	socialMedia?: Record<string, any> | undefined
 
-    /** Profile Pic */
-    profilePic?: Asset | undefined
+	/** Profile Pic */
+	profilePic?: Asset | undefined
 
-    /** bio */
-    bio?: string | undefined
+	/** bio */
+	bio?: string | undefined
 
-    /** services */
-    services?: IService[] | undefined
+	/** services */
+	services?: IService[] | undefined
 
-    /** Jobs */
-    jobs?: IJob[] | undefined
+	/** Jobs */
+	jobs?: IJob[] | undefined
 
-    /** email */
-    email?: string | undefined
+	/** email */
+	email?: string | undefined
 
-    /** phone */
-    phone?: string | undefined
+	/** phone */
+	phone?: string | undefined
 
-    /** education */
-    education?: IAcademicTraining[] | undefined
+	/** education */
+	education?: IAcademicTraining[] | undefined
 }
 
 export interface IAuthor extends Entry<IAuthorFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'author'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'author'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface IBlogPostFields {
-    /** title */
-    title: string
+	/** title */
+	title: string
 
-    /** slug */
-    slug?: string | undefined
+	/** slug */
+	slug?: string | undefined
 
-    /** Publish Date */
-    publishDate?: string | undefined
+	/** Publish Date */
+	publishDate?: string | undefined
 
-    /** resume */
-    resume?: string | undefined
+	/** resume */
+	resume?: string | undefined
 
-    /** Body */
-    body?: Document | undefined
+	/** Body */
+	body?: Document | undefined
 
-    /** tags */
-    tags?: Entry<{ [fieldId: string]: unknown }>[] | undefined
+	/** tags */
+	tags?: Entry<{ [fieldId: string]: unknown }>[] | undefined
 
-    /** Featured Image */
-    featuredImage?: Asset | undefined
+	/** Featured Image */
+	featuredImage?: Asset | undefined
 }
 
 /** Blog post entry */
 
 export interface IBlogPost extends Entry<IBlogPostFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'blogPost'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'blogPost'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface IJobFields {
-    /** Name */
-    name?: string | undefined
+	/** Name */
+	name?: string | undefined
 
-    /** Title */
-    title?: string | undefined
+	/** Title */
+	title?: string | undefined
 
-    /** Date start */
-    start?: string | undefined
+	/** Date start */
+	start?: string | undefined
 
-    /** Date end */
-    end?: string | undefined
+	/** Date end */
+	end?: string | undefined
 
-    /** description */
-    description?: string | undefined
+	/** description */
+	description?: string | undefined
 
-    /** skills */
-    skills?: ISkill[] | undefined
+	/** skills */
+	skills?: ISkill[] | undefined
 
-    /** projects */
-    projects?: IProject[] | undefined
+	/** projects */
+	projects?: IProject[] | undefined
 
-    /** Current job */
-    currentJob?: boolean | undefined
+	/** Current job */
+	currentJob?: boolean | undefined
 }
 
 export interface IJob extends Entry<IJobFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'job'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'job'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface IProjectFields {
-    /** title */
-    title?: string | undefined
+	/** title */
+	title?: string | undefined
 
-    /** url */
-    url?: string | undefined
+	/** url */
+	url?: string | undefined
 
-    /** date */
-    date?: string | undefined
+	/** date */
+	date?: string | undefined
 
-    /** description */
-    description?: string | undefined
+	/** description */
+	description?: string | undefined
 
-    /** challenges */
-    challenges?: string | undefined
+	/** challenges */
+	challenges?: string | undefined
 
-    /** contribution */
-    contribution?: string | undefined
+	/** contribution */
+	contribution?: string | undefined
 
-    /** outcome */
-    outcome?: string | undefined
+	/** outcome */
+	outcome?: string | undefined
 
-    /** preview */
-    preview?: Asset | undefined
+	/** preview */
+	preview?: Asset | undefined
 
-    /** Skills */
-    skills?: ISkill[] | undefined
+	/** Skills */
+	skills?: ISkill[]  | undefined
 
-    /** comments */
-    comments?: string | undefined
+	/** comments */
+	comments?: string | undefined
+
+	/** relevance  */
+	relevance?: number | undefined
 }
 
 /** projects in which he contributed */
 
 export interface IProject extends Entry<IProjectFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'project'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'project'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface IServiceFields {
-    /** Title */
-    title?: string | undefined
+	/** Title */
+	title?: string | undefined
 
-    /** Description */
-    description?: Document | undefined
+	/** Description */
+	description?: Document | undefined
 
-    /** featuredImage */
-    featuredImage?: Asset | undefined
+	/** featuredImage */
+	featuredImage?: Asset | undefined
 
-    /** active */
-    active?: boolean | undefined
+	/** active */
+	active?: boolean | undefined
 
-    /** Examples */
-    examples?: Entry<{ [fieldId: string]: unknown }>[] | undefined
+	/** Examples */
+	examples?: Entry<{ [fieldId: string]: unknown }>[] | undefined
 }
 
-/** descripción de los servicios que ofrezco */
+/** descripción de los servicios que ofresco */
 
 export interface IService extends Entry<IServiceFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'service'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'service'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface ISkillFields {
-    /** name */
-    name?: string | undefined
+	/** name */
+	name?: string | undefined
 
-    /** description */
-    description?: string | undefined
+	/** description */
+	description?: string | undefined
 
-    /** image */
-    image?: Asset | undefined
+	/** image */
+	image?: Asset | undefined
 
-    /** Type */
-    type?: 'lang' | 'frontend' | 'backend' | 'db' | 'other' | undefined
+	/** Type */
+	type?: 'lang' | 'frontend' | 'backend' | 'db' | 'other' | undefined
 
-    /** Years */
-    years?: number | undefined
+	/** Years */
+	years?: number | undefined
 }
 
 /** skills descriptions */
 
 export interface ISkill extends Entry<ISkillFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'skill'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'skill'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export interface ITagFields {
-    /** Tag */
-    tag: string
+	/** Tag */
+	tag: string
 }
 
 /** Blog post tag */
 
 export interface ITag extends Entry<ITagFields> {
-    sys: {
-        id: string
-        type: string
-        createdAt: string
-        updatedAt: string
-        locale: string
-        contentType: {
-            sys: {
-                id: 'tag'
-                linkType: 'ContentType'
-                type: 'Link'
-            }
-        }
-    }
+	sys: {
+		id: string
+		type: string
+		createdAt: string
+		updatedAt: string
+		locale: string
+		contentType: {
+			sys: {
+				id: 'tag'
+				linkType: 'ContentType'
+				type: 'Link'
+			}
+		}
+	}
 }
 
 export type CONTENT_TYPE =
-    | 'academicTraining'
-    | 'author'
-    | 'blogPost'
-    | 'job'
-    | 'project'
-    | 'service'
-    | 'skill'
-    | 'tag'
+	| 'academicTraining'
+	| 'author'
+	| 'blogPost'
+	| 'job'
+	| 'project'
+	| 'service'
+	| 'skill'
+	| 'tag'
 
 export type LOCALE_CODE = 'en-US' | 'es-MX'
 

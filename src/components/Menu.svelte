@@ -19,7 +19,7 @@
 	]
 </script>
 
-<div class="h-screen pt-4 pb-12 fixed w-menu">
+<div class="h-screen pt-4 pb-12 fixed w-menu print:hidden">
 	<div
 		class="flex flex-col items-center justify-between h-full border-r-2 border-neutral-800 border-dashed w-menu ml-open-menu transition-all"
 	>
