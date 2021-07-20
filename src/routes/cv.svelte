@@ -38,6 +38,7 @@
 <div class="print:w-screen m-auto h-screen" id="cv">
 	<div class="w-1/3 bg-neutral-500 text-center p-4">
 		<Logo show allwayShow textColorPrimary="text-support-500" textColorSecondary="text-white" class="text-2xl" />
+        <img src={author.profilePic.fields.file.url} alt="Profile Pic">
 	</div>
 	<div class="w-2/3" />
 </div>
