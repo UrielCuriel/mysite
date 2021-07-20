@@ -44,7 +44,7 @@
 			</span>
 		{/if}
 	{/each}
-	<span class="blink">_</span>
+	<span class="blink -m-4">_</span>
 </span>
 
 <style>

@@ -65,12 +65,31 @@ module.exports = {
 				'11xl': '9rem',
 				'12xl': '10rem'
 			},
+			width: {
+				menu: '200px'
+			},
+			margin: {
+				'open-menu': '0px',
+				'closed-menu': '-200px'
+			},
 			minHeight: {
 				page: 'calc(100vh - 56px)'
 			},
 			screens: {
 				print: { raw: 'print' }
-			}
+			},
+			gridTemplateColumns: {
+				layout: '200px 1fr 1fr'
+			},
+			gridTemplateRows: {
+				layout: '1fr 50px'
+			},
+			gridTemplateAreas: {
+				'layout': [
+				  'menu body body',
+				  'footer footer footer',
+				],
+			  },
 		},
 		fontFamily: {
 			display: ['Leo Rounded Pro', 'Roboto'],
@@ -79,14 +98,8 @@ module.exports = {
 			subtitle: ['Reenie Beanie', 'cursive'],
 			logo: ['urielcuriel', 'Leo Rounded Pro', 'Roboto']
 		},
-		colors: { primary, neutral, support, ...base },
-		gridTemplateColumns: {
-			layout: 'minmax(50px,200px) 1fr 1fr'
-		},
-		gridTemplateRows:{
-			layout: '1fr 50px'
-		}
+		colors: { primary, neutral, support, ...base }
 	},
 	variants: { fill: ['hover'], animation: ['responsive', 'hover', 'focus'] },
-	plugins: []
+	plugins: [require('@savvywombat/tailwindcss-grid-areas')]
 }
