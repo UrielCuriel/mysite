@@ -7,3 +7,6 @@
   command = "npm run dev -- --host 0.0.0.0"
   publish = "build/"
   functions = "functions/"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
