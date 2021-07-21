@@ -20,11 +20,11 @@ const config = {
 		target: '#svelte',
 
 		vite: {
-			plugins: [
-				commonjsExternals.default({
-					externals: ['chrome-aws-lambda', 'puppeteer-core']
-				})
-			],
+			// plugins: [
+			// 	commonjsExternals.default({
+			// 		externals: ['chrome-aws-lambda', 'puppeteer-core']
+			// 	})
+			// ],
 			server: {
 				watch: {
 					usePolling: true
