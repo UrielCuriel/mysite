@@ -21,11 +21,10 @@ const config = {
 
 		vite: {
 			plugins: [
-				commonjsExternals({
+				commonjsExternals.default({
 					externals: ['chrome-aws-lambda', 'puppeteer-core']
 				})
 			],
-
 			server: {
 				watch: {
 					usePolling: true

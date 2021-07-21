@@ -1,6 +1,7 @@
-import type { EndpointOutput, Request } from '@sveltejs/kit'
+import type { Request } from '@sveltejs/kit'
 import chromium from 'chrome-aws-lambda'
 import puppeteer from 'puppeteer-core'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function get({ host }: Request): Promise<any> {
 	const executablePath = host.includes('localhost')
 		? './node_modules/puppeteer/.local-chromium/linux-884014/chrome-linux/chrome'
