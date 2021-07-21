@@ -1,4 +1,4 @@
-import { client } from '$lib/contentful'
+import { client } from '$lib/contentful-client'
 import type { IAuthorFields } from '$lib/types'
 import type { EndpointOutput, Request } from '@sveltejs/kit'
 import type { JSONValue } from '@sveltejs/kit/types/endpoint'

@@ -1,6 +1,5 @@
-import * as contentful from 'contentful'
 import { config } from '$lib/config'
-
+import * as contentful from 'contentful'
 export const client = contentful.createClient({
 	space: config.CONTENTFUL_SPACE,
 	environment: config.CONTENTFUL_ENVIRONMENT,

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition'
 	export let show: boolean = false
-	export let textColorPrimary: string = ''
-	export let textColorSecondary: string = ''
+	export let textColorPrimary: string = null
+	export let textColorSecondary: string = null
 	export let allwayShow: boolean = false
 </script>
 
