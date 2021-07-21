@@ -4,7 +4,7 @@
   functions = "functions/"
 
 [dev]
-  command = "npm run dev -- --host 0.0.0.0 --port 3700"
+  command = "npm run build"
   publish = "build/"
   functions = "functions/"
 
