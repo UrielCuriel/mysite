@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-netlify'
 import preprocess from 'svelte-preprocess'
+import commonjsExternals from 'vite-plugin-commonjs-externals'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +9,7 @@ const config = {
 	preprocess: preprocess({
 		defaults: {
 			style: 'postcss',
-			script:'typescript'
+			script: 'typescript'
 		},
 		postcss: true
 	}),
@@ -19,6 +20,12 @@ const config = {
 		target: '#svelte',
 
 		vite: {
+			plugins: [
+				commonjsExternals({
+					externals: ['chrome-aws-lambda', 'puppeteer-core']
+				})
+			],
+
 			server: {
 				watch: {
 					usePolling: true
