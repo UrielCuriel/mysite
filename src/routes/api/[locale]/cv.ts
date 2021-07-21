@@ -7,7 +7,8 @@ export async function get({ host }: Request): Promise<any> {
 		: await chromium.executablePath
 	const browser = await puppeteer.launch({
 		args: chromium.args,
-		executablePath
+		executablePath,
+		headless: chromium.headless
 	})
 
 	const page = await browser.newPage()
